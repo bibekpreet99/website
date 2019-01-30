@@ -115,4 +115,12 @@ var places = ["Cos", "Main Auditorium", "G Block", "Library", "Mechanical Block"
 /*initiate the autocomplete function on the "myInput" element, and pass along the places array as possible autocomplete values:*/
 autocomplete(document.getElementById("myInput"), places);
 
-
+document.getElementById("but").addEventListener("click", ()=>{
+  text = document.getElementById('myInput').value
+  if(text.toLowerCase() == "cos"){
+    window.open("./another.html")
+  }
+  else{
+  alert("Please enter something from the list")
+  }
+})
