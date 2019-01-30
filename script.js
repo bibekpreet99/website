@@ -118,7 +118,7 @@ autocomplete(document.getElementById("myInput"), places);
 document.getElementById("but").addEventListener("click", ()=>{
   text = document.getElementById('myInput').value
   if(text.toLowerCase() == "cos"){
-    window.open("./another.html")
+    window.location.href= "./another.html"
   }
   else{
   alert("Please enter something from the list")
