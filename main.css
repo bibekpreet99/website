@@ -76,7 +76,44 @@ header form{
 .cont1 h1{
   font-size: 5em;
 }
-.autocomplete-items {
+
+#but{
+  background: transparent;
+  border: 2px solid #ff9234;
+  color: wheat;
+  font-weight: 900;
+}
+
+#but:hover, #but:focus{
+  background: #ff9234;
+  box-shadow: 0 0 0 0.2rem orange; 
+}
+
+select{
+  width: 40%;
+  padding: 14px 10px;
+  background-color: transparent;
+  /* border: none;
+  color: cyan; */
+}
+/* .modal-header, .modal-body, .modal-footer{
+  background: #6e3b3b;
+  overflow: hidden;
+  border-color: #6e3b3b;
+} */
+option{
+  background-color: transparent;
+}
+
+/* .travel{
+  background-color: #6e3b3b;
+  color: #ff9234
+} */
+label{
+  font-weight: 900;
+
+}
+/* .autocomplete-items {
   position: absolute;
   border: 2px solid cyan;
   border-bottom: none;
@@ -86,8 +123,8 @@ header form{
   left: 0;
   right: 5%;
 
-}
-
+} */
+/* 
 .autocomplete-items div {
   padding: 10px;
   cursor: pointer;
@@ -106,7 +143,7 @@ header form{
 .autocomplete {
   position: relative;
   display: inline-block;
-}
+} */
 .cont2{
   background-color: #232323;
   background-size: cover;
@@ -139,7 +176,6 @@ header form{
   font-size: 6em;
   color: #ff9234;
   font-family: 'Allura';
-  margin-left: 3em;
 }
 #title{
   text-decoration: none;
@@ -292,6 +328,11 @@ header img{
     margin-left: .5em;
     font-size: 5em;
     margin-top: 0;
+    font-weight: 900;
+  font-size: 6em;
+  color: #ff9234;
+  font-family: 'Allura';
+  text-decoration: none;
   }
   nav{
     margin-top: 1em;
@@ -307,6 +348,9 @@ header img{
   header form{
     margin-top: 1em;
   }
+  nav ul{
+    float: right;
+  }
 }
 .foot{
   height: auto;
@@ -314,6 +358,5 @@ header img{
   text-align: center;
   font-size: 1em;
   font-weight: 500;
-  background-color: honeydew
+  background-color: snow
 }
-
