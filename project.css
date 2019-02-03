@@ -1,0 +1,143 @@
+body {
+  overflow: hidden;
+  font-family: 'Baloo-Thambi', sans-serif;
+}
+#menu {
+  position:absolute;
+  display: flex;
+  flex-direction: column;
+  top:50%;
+  left:50%;
+  /* note: the translateZ(0) enables hardware accel */
+  /* without it, there is a weird gap between panels */
+  transform: translate(-50%, -50%) translateZ(0);
+  height: 80vh;
+  width: 53.33333vh;
+  border-radius: 2vh;
+  overflow: hidden;
+  box-shadow: 4vh 7vh 14vh -6vh rgba(0, 0, 0, 0.35), -4vh 7vh 14vh -6vh rgba(0, 0, 0, 0.35);
+}
+#heading{
+  font-family: 'Sacramento', cursive;
+  font-size:60px;
+  background-color: #005792;
+  color:#ffc300;
+  padding-left: 250px;
+  margin:0;
+}
+.panel {
+  position: relative;
+  flex-grow: 1;
+  transition: all 0.4s ease;
+  transition-delay: 0s;
+}
+.panel .name, .panel .type, .panel .abv {
+  position: absolute;
+  transition: all 0.4s ease;
+  transition-delay: 0;
+}
+.panel .name {
+  left: 5vh;
+  top: 50%;
+  margin-top: -2.5vh;
+  font-size: 5vh;
+  line-height: 5vh;
+  font-weight: 300;
+}
+.panel .type {
+  left: 5vh;
+  top: 50%;
+  margin-top: 2.5vh;
+  font-size: 0;
+  line-height: 2.5vh;
+  font-weight: 100;
+}
+.panel .abv {
+  top: 50%;
+  right: 5vh;
+  font-size: 2.5vh;
+  line-height: 2.5vh;
+  font-weight: 500;
+}
+.panel:nth-of-type(1) {
+  z-index: 9;/*glow kam karega borders ki*/
+  /*yaha pe pictures !!!*/background: radial-gradient(circle at top left, #f6ec82, #f6ec82, #f3e65c);
+  filter: drop-shadow(0 0 1vh #b58325);/*blur kari and add shadow color*/
+}
+.panel:nth-of-type(1) h1, .panel:nth-of-type(1) h2{
+  color: #dfb361;
+}
+
+.panel:nth-of-type(1) .abv {
+  color: #fff;
+}
+.panel:nth-of-type(2) {
+  z-index: 8;
+  background: radial-gradient(circle at top left, #dfb361, #dfb361, #d8a33f);
+  filter: drop-shadow(0 0 1vh #a4452a);
+}
+.panel:nth-of-type(2) h1, .panel:nth-of-type(2) h2{
+  color: #d6795e;
+}
+.panel:nth-of-type(2) .abv {
+  color: #f6ec82;
+}
+.panel:nth-of-type(3) {
+  z-index: 7;
+  background: radial-gradient(circle at top left, #d6795e, #d6795e, #ce5e3d);
+  filter: drop-shadow(0 0 1vh #633146);
+}
+.panel:nth-of-type(3) h1, .panel:nth-of-type(3) h2{
+  color: #a75377;
+}
+.panel:nth-of-type(3) .abv {
+  color: #dfb361;
+}
+.panel:nth-of-type(4) {
+  z-index: 6;
+  background: radial-gradient(circle at top left, #a75377, #a75377, #8c4564);
+  filter: drop-shadow(0 0 1vh #11111a);
+}
+.panel:nth-of-type(4) h1, .panel:nth-of-type(4) h2{
+  color: #3b3b56;
+}
+.panel:nth-of-type(4) .abv {
+  color: #d6795e;
+}
+
+/* panels get larger and show more info when you hover over them */
+.panel:hover {
+  flex-grow: 2;
+}
+.panel:hover .name {
+  left: 15vh;
+  margin-top: -3.75vh;
+}
+.panel:hover .type {
+  left: 15vh;
+  margin-top: 1.75vh;
+  font-size: 2.5vh;
+}
+.panel:hover .abv {
+  margin-top: 1.25vh;
+}
+@media (orientation: landscape) {
+  /* put a blurred image in the background, just for pretty presentation */
+  body::before {
+    content: '';
+    display: block;
+    height: 100vh;
+    width: 100%;
+    background: url('http://lorempixel.com/640/480/food') center/cover;
+    filter: blur(5vh);
+    transform: scale(1.2);
+    opacity: 0.4;
+  }
+}
+@media (orientation: portrait) {
+  #menu {
+    border-radius: 0;
+    width: 100%;
+    height: 100vh;
+  }
+}
